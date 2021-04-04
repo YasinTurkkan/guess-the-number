@@ -11,8 +11,6 @@ ourRandomNumber = randomNumber();
 
 const inputForm = document.getElementById("guessform");
 
-// button4.addEventListener('click', eventListener); //, { once: true });
-
 inputForm.addEventListener('submit', game);
 
 function game() {
@@ -35,14 +33,11 @@ function game() {
       } else if (playerNumber > ourRandomNumber) {
         message = "GO DOWN";
       } else {
-        message = "GOOD JOB. CONGURATULATIONS";
+        message = "GOOD JOB. CONGRATULATIONS";
         submitBtn.disabled = true;
       }
 
     const adviceMessage = document.getElementById("advice");
     adviceMessage.innerHTML = `<b>${message}</b>`;
-
-    console.log(playerNumber);
-    console.log("Random number is:" + ourRandomNumber);
 
 }
